@@ -26,15 +26,53 @@
 
 <body class="bg-success bg-opacity-25" style="font-family: 'Sarabun', sans-serif;">
     <header>
-        <p>77777777777</p>
         <!-- nav-start-->
         <nav class="navbar navbar-light bg-success bg-opacity-75 ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#" style="margin-left: 10px;">
-                    <img src="img/man-smile-icon-png_269182.jpg" alt="" width="30" height="24"
-                        class="d-inline-block align-text-top" id="img">
-                    นาย นวพล สินมา
-                </a>
+                <div class="dropdown">
+                    <a class="navbar-brand  dropdown-toggle" href="#" style="margin-left: 10px;"  data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/man-smile-icon-png_269182.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"
+                            id="img">
+                        นาย นวพล สินมา
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#progress">ความคืบหน้า</a></li>
+                        <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#test">แบบทดสอบ</a></li>
+                    </ul>
+                </div>
+                <!-- โมเดลความคืบหน้า -->
+                <div class="modal fade" id="progress" tabindex="-1" aria-labelledby="progress" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="logoutLabel">ความคืบหน้า</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>สถานะ :</p>
+                                <p>การดูวิดีโอ :</p>
+                                <p>การทำข้อสอบ :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- โมเดลแบบทดสอบ -->
+                <div class="modal fade" id="test" tabindex="-1" aria-labelledby="test" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="logoutLabel">แบบทดสอบ</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- ออกจากระบบ เริ่ม -->
                 <!-- Button trigger modal -->
