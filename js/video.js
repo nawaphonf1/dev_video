@@ -3,55 +3,55 @@ function light(Cvideo) {
   var video;
   if (Cvideo == 1) {
     document.getElementById("nameV").innerHTML ="1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart";
-    video = "video/1.แนะนำเว็บแอปพลิเคชัน อพม.Smart.mp4";
+    video = "video/1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart.mp4";
   } else if (Cvideo == 2) {
     document.getElementById("nameV").innerHTML = "2.1 การเข้าสู่ระบบ";
-    video = "video/2. การเข้าสู่ระบบ.mp4";
+    video = "video/2.1 การเข้าสู่ระบบ.mp4";
   } else if (Cvideo == 3) {
     document.getElementById("nameV").innerHTML ="3.1 การยื่นคำร้องและการกดรับพิกัด GPS";
-    video = "video/3.การยื่นคำร้องและการกดรับพิกัด GPS.mp4";
+    video = "video/3.1 การยื่นคำร้องและการกดรับพิกัด GPS.mp4";
   } else if (Cvideo == 4) {
     document.getElementById("nameV").innerHTML ="3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม";
-    video = "video/4.การกรอกประวัติผู้ประสบปัญหาทางสังคม.mp4";
+    video = "video/3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม.mp4";
   } else if (Cvideo == 5) {
     document.getElementById("nameV").innerHTML ="3.3 การกรอกที่อยู่ตามทะเบียนบ้าน";
-    video = "video/5.การกรอกที่อยู่ตามทะเบียนบ้าน.mp4";
+    video = "video/3.3 การกรอกที่อยู่ตามทะเบียนบ้าน.mp4";
   } else if (Cvideo == 6) {
     document.getElementById("nameV").innerHTML = "3.4 การกรอกที่อยู่ปัจจุบัน";
-    video = "video/6.การกรอกที่อยู่ปัจจุบัน.mp4";
+    video = "video/3.4 การกรอกที่อยู่ปัจจุบัน.mp4";
   } else if (Cvideo == 7) {
     document.getElementById("nameV").innerHTML = "3.5 การเลือกประภทผู้ขอรับบริการ";
-    video = "video/7.การเลือกประเภทผู้ขอรับบริการ.mp4";
+    video = "video/3.5การเลือกประเภทผู้ขอรับบริการ.mp4";
   } else if (Cvideo == 8) {
     document.getElementById("nameV").innerHTML ="3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ";
-    video = "video/8.การเลือกสภาพปัญหาความเดือดร้อนที่พบ.mp4";
+    video = "video/3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ.mp4";
   } else if (Cvideo == 9) {
     document.getElementById("nameV").innerHTML ="3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ";
-    video = "video/9.การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ.mp4";
+    video = "video/3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ.mp4";
   } else if (Cvideo == 10) {
     document.getElementById("nameV").innerHTML = "3.8 สิทธิสวัสดิการที่เคยได้รับ";
-    video = "video/10.สิทธิสวัสดิการที่เคยได้รับ.mp4";
+    video = "video/3.8 สิทธิสวัสดิการที่เคยได้รับ.mp4";
   } else if (Cvideo == 11) {
     document.getElementById("nameV").innerHTML = "3.9 การรับรองข้อมูลส่วนบุคคล";
-    video = "video/11.การรับรองข้อมูลส่วนบุคคล.mp4";
+    video = "video/3.9 การรับรองข้อมูลส่วนบุคคล.mp4";
   } else if (Cvideo == 12) {
     document.getElementById("nameV").innerHTML ="3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม";
-    video = "video/12.การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม.mp4";
+    video = "video/3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม.mp4";
   } else if (Cvideo == 13) {
     document.getElementById("nameV").innerHTML = "3.11 การยืนยันการบันทึกข้อมูล";
-    video = "video/13.การยืนยันการบันทึกข้อมูล.mp4";
+    video = "video/3.11 การยืนยันการบันทึกข้อมูล.mp4";
   } else if (Cvideo == 14) {
     document.getElementById("nameV").innerHTML = "4.1 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล";
-    video = "video/14.การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล.mp4";
+    video = "video/4.1 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล.mp4";
   }else if (Cvideo == 15) {
     document.getElementById("nameV").innerHTML = "4.2 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ";
-    video = "video/15.การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ.mp4";
+    video = "video/4.2 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ.mp4";
   }else if (Cvideo == 16) {
     document.getElementById("nameV").innerHTML = "5.1 ความหมายของสถานะ";
-    video = "video/16.ความหมายของสถานะ.mp4";
+    video = "video/5.1 ความหมายของสถานะ.mp4";
   }else if (Cvideo == 17) {
-    document.getElementById("nameV").innerHTML = "6.1 การสร้าง อพม.Smart ไว้บนหน้าจอหลัก";
-    video = "video/17.การสร้าง อพม.Smart ไว้บนหน้าจอหลัก.mp4";
+    document.getElementById("nameV").innerHTML = "6.1 การสร้างทางลัด อพม.Smart ไว้บนหน้าจอหลัก";
+    video = "video/6.1 การสร้าง อพม.Smart ไว้บนหน้าจอหลัก.mp4";
   }
   document.getElementById("videoP").src = video;
 }
