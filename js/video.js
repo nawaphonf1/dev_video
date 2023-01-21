@@ -84,36 +84,13 @@ video.addEventListener("ended", function () {
   supposedCurrentTime = 0;
 });
 
-
-//เมื่อดูครั้งแรกจะไม่สามารถกรอได้
-const fastForwardButton = document.getElementById("fast-forward-button");
-
-// Check if the user has watched the video before
-if (localStorage.getItem("hasWatchedVideo") === "true") {
-  // If the user has watched the video before, enable the fast-forward button
-  fastForwardButton.disabled = false;
-} else {
-  // If the user has not watched the video before, disable the fast-forward button
-  fastForwardButton.disabled = true;
-}
-
-// Add an event listener to the video element that listens for the "ended" event
-video.addEventListener("ended", function() {
-  // When the video ends, set the "hasWatchedVideo" value in local storage to true
-  localStorage.setItem("hasWatchedVideo", "true");
-  // Enable the fast-forward button
-  fastForwardButton.disabled = false;
-});
-
-
-
-
 //เปอร์เซ็น
 video.addEventListener("timeupdate", function () {
   // Calculate the percentage of the video that has been viewed
   var percent = (video.currentTime / video.duration) * 100;
   percentage.innerHTML = percent + "%";
 });
+
 
 //ค้นหา
 function search() {
@@ -131,3 +108,6 @@ function search() {
     }
   }
 }
+
+//แบบทดสอบ
+var Q1 = document.getElementById("Q1")
