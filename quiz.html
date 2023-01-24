@@ -21,19 +21,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
 
     <title>แบบทดสอบ</title>
-
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="font-family: 'Sarabun', sans-serif;">
+<body class="bg-success bg-opacity-25" style="font-family: 'Sarabun', sans-serif;">
 
-    <div class="container mb-5">
+    <div class="container mb-5 mt-4">
         <h1 class="text-center">แบบทดสอบหลังเรียน</h1>
-        <form id="quizForm">
+        <h4 id="result"class="center1 pb-5"></h4>
+        <form id="quizForm" class="ms-3">
 
         </form>
-        <input type="button" value="Submit" onclick="checkAnswers()">
-        <p id="result"></p>
+        
+        <input class="btn btn-primary center1" type="button" value="Submit" onclick="checkAnswers()" id="submitBtn">
+
     </div>
 
 </body>
