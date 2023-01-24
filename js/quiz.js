@@ -129,24 +129,24 @@ function checkAnswers() {
       questionCol.appendChild(message);
     }
   }
+  //แสดงคำตอบ
   document.getElementById("result").innerHTML =
     "คุณได้คะแนน " + correctAnswers + " / " + questions.length;
-
+  //ทำให้ปุ่มsubmitหายเมื่อกดส่งคำตอบ
   document.getElementById("submitBtn").style.display = "none";
-
+  //เพิ่มปุ่มกลับไปยังหนาหลัก
   var backButton = document.createElement("input");
   backButton.setAttribute("type", "button");
   backButton.setAttribute("value", "กลับไปหน้าหลัก");
   backButton.setAttribute("class", "btn btn-primary center1");
   backButton.setAttribute("onclick", "location.href='User-page.html'");
   document.getElementById("quizForm").appendChild(backButton);
-  
+  //เมื่อกดส่งคำตอบจะไม่สามารถทำข้อสอบต่อได้
   var inputs = document.getElementsByClassName("form-check-input");
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].disabled = true;
   }
 
-  localStorage.setItem("score", correctAnswers);
 }
 
 displayQuestions();
