@@ -15,18 +15,16 @@
     <link rel="stylesheet" href="css/bootstrap-utilities.css">
     <link rel="stylesheet" href="css/bootstrap-utilities.rtl.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
-    <script>
-        var score = localStorage.getItem("score");
-        document.getElementById("score").innerHTML += score;
+    <link href="https://vjs.zencdn.net/7.21.1/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.21.1/video.min.js"></script>
 
-
-    </script>
 </head>
 
 <body class="bg-success bg-opacity-25" style="font-family: 'Sarabun', sans-serif;">
@@ -69,7 +67,7 @@
                 <!-- โมเดลความคืบหน้า จบ-->
 
                 <!-- โมเดลแบบทดสอบ เริ่ม-->
-                
+
 
                 <!-- ออกจากระบบ เริ่ม -->
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModel">
@@ -110,22 +108,16 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body p-2">
-
                                 <video id="videoP" class="video-js" controls data-setup='{}'>
-                                    <source src="test.mp4" type="video/mp4">
-                                    <p class="vjs-no-js">
-                                        To view this video please enable JavaScript, and consider upgrading to a web browser that
-                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                                    </p>
+                                    <source src="video/1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart.mp4" type="video/mp4">
                                 </video>
                                 <p id="percentage">0</p>
-
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- video-player-end  -->
 
             <!-- selec video start-->
@@ -138,7 +130,7 @@
                         <h1 id="percent"></h1>
                         <div class="col-12 bg-light border-radius-0">
                             <h3 class="text-center pt-3 pb-3" id="nameV"> 1.แนะนำเว็บแอปพลิเคชัน อพม.Smart </h3>
-                           
+
                             <!-- search start -->
                             <div class="container text-center">
                                 <form class="row justify-content-md-center">
@@ -167,7 +159,7 @@
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushHead">
                                         <div class="accordion-body">
 
-                                            <a href="#" class="nav-link text-dark ms-3" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3" id="videoLink1"
                                                 onclick="light(1)">1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart</a>
 
                                         </div>
@@ -188,7 +180,7 @@
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushHead">
                                         <div class="accordion-body">
 
-                                            <a href="#" class="nav-link text-dark ms-3" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3" id="videoLink2"
                                                 onclick="light(2)">2.1
                                                 การเข้าสู่ระบบ</a>
 
@@ -211,37 +203,37 @@
                                         <div class="accordion-body col">
 
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4 pt-2" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4 pt-2" id="videoLink3"
                                                 onclick="light(3)">3.1 การยื่นคำร้องและการกดรับพิกัด GPS</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink4"
                                                 onclick="light(4)">3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink5"
                                                 onclick="light(5)">3.3 การกรอกที่อยู่ตามทะเบียนบ้าน</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink6"
                                                 onclick="light(6)">3.4 การกรอกที่อยู่ปัจจุบัน</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink7"
                                                 onclick="light(7)">3.5 การเลือกประเภทผู้ขอรับบริการ</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink8"
                                                 onclick="light(8)">3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink9"
                                                 onclick="light(9)">3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink10"
                                                 onclick="light(10)">3.8 สิทธิสวัสดิการที่เคยได้รับ</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3  pb-4" id="videoLink11"
                                                 onclick="light(11)">3.9 การรับรองข้อมูลส่วนบุคคล</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3 pb-4" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3 pb-4" id="videoLink12"
                                                 onclick="light(12)">3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม</a>
 
-                                            <a href="#" class="nav-link text-dark ms-3 pb-2" id="SelecV"
+                                            <a href="#" class="nav-link text-dark ms-3 pb-2" id="videoLink13"
                                                 onclick="light(13)">3.11 การยืนยันการบันทึกข้อมูล</a>
 
 
@@ -264,10 +256,10 @@
                                         aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushHead">
                                         <div class="accordion-body">
                                             <nav class="nav flex-column">
-                                                <a class="nav-link text-dark" href="#" onclick="light(14)">4.1
+                                                <a class="nav-link text-dark" href="#" onclick="light(14)"id="videoLink14">4.1
                                                     การตรวจสอบและบันทึกข้อมูลสำหรับ
                                                     อพม.ระดับตำบล</a>
-                                                <a class="nav-link text-dark" href="#" onclick="light(15)">4.2
+                                                <a class="nav-link text-dark" href="#" onclick="light(15)"id="videoLink15">4.2
                                                     การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ</a>
                                             </nav>
                                         </div>
@@ -288,7 +280,7 @@
                                         aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushHead">
                                         <div class="accordion-body">
                                             <nav class="nav flex-column">
-                                                <a class="nav-link text-dark" href="#" onclick="light(16)">5.1
+                                                <a class="nav-link text-dark" href="#" onclick="light(16)"id="videoLink16">5.1
                                                     ความหมายของสถานะ</a>
                                             </nav>
                                         </div>
@@ -309,7 +301,7 @@
                                         aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushHead">
                                         <div class="accordion-body">
                                             <nav class="nav flex-column">
-                                                <a class="nav-link text-dark" href="#" onclick="light(17)">6.1
+                                                <a class="nav-link text-dark" href="#" onclick="light(17)"id="videoLink17">6.1
                                                     การสร้างทางลัด อพม.Smart
                                                     ไว้บนหน้าจอหลัก</a>
                                             </nav>
@@ -341,7 +333,7 @@
 <script src="js/bootstrap.esm.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/video.js"></script>
-<script src="js/quizconfig.js"></script>
+<script src="js/js.js"></script>
 
 
 <script>
