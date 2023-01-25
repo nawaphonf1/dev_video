@@ -111,10 +111,14 @@
                         <div class="card">
                             <div class="card-body p-2">
 
-                                <video id="videoP" class="img-thumbnail" controls>
-                                    <source src="video/1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
+                                <video id="videoP" class="video-js" controls data-setup='{}'>
+                                    <source src="test.mp4" type="video/mp4">
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                    </p>
                                 </video>
+                                <p id="percentage">0</p>
 
                             </div>
                         </div>
