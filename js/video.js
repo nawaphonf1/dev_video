@@ -1,36 +1,76 @@
-var player = videojs("videoP");
 //่กดเลือกวิดิโอ
-var videos = [
-  { name: "1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart", src: "video/1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart.mp4" },
-  { name: "2.1 การเข้าสู่ระบบ", src: "video/2.1 การเข้าสู่ระบบ.mp4" },
-  { name: "3.1 การยื่นคำร้องและการกดรับพิกัด GPS", src: "video/3.1 การยื่นคำร้องและการกดรับพิกัด GPS.mp4" },
-  { name: "3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม", src: "video/3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม.mp4" },
-  { name: "3.3 การกรอกที่อยู่ตามทะเบียนบ้าน", src: "video/3.3 การกรอกที่อยู่ตามทะเบียนบ้าน.mp4" },
-  { name: "3.4 การกรอกที่อยู่ปัจจุบัน", src: "video/3.4 การกรอกที่อยู่ปัจจุบัน.mp4" },
-  { name: "3.5 การเลือกประภทผู้ขอรับบริการ", src: "video/3.5การเลือกประเภทผู้ขอรับบริการ.mp4" },
-  { name: "3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ", src: "video/3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ.mp4" },
-  { name: "3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ", src: "video/3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ.mp4" },
-  { name: "3.8 สิทธิสวัสดิการที่เคยได้รับ", src: "video/3.8 สิทธิสวัสดิการที่เคยได้รับ.mp4" },
-  { name: "3.9 การรับรองข้อมูลส่วนบุคคล", src: "video/3.9 การรับรองข้อมูลส่วนบุคคล.mp4" },
-  { name: "3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม", src: "video/3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม.mp4" },
-  { name: "3.11 การยืนยันการบันทึกข้อมูล", src: "video/3.11 การยืนยันการบันทึกข้อมูล.mp4" },
-  { name: "4.1 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล", src: "video/4.1 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล.mp4" },
-  { name: "4.2 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ", src: "video/4.2 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ.mp4" },
-  { name: "5.1 ความหมายของสถานะ", src: "video/5.1 ความหมายของสถานะ.mp4" },
-  { name: "6.1 การสร้างทางลัด อพม.Smart ไว้บนหน้าจอหลัก", src: "video/6.1 การสร้างทางลัด อพม.Smart ไว้บนหน้าจอหลัก.mp4" },
-];
-
-for (var i = 0; i < 17; i++) {
-  document.getElementById("videoLink" + (i + 1)).addEventListener("click", function() {
-    var videoIndex = this.id.slice(-1) - 1;
-    var video = videos[videoIndex];
-    player.src({ type: 'video/mp4', src: video.src });
-    document.getElementById("videoName").innerHTML = video.name;
-  });
+function light(Cvideo) {
+  var video;
+  if (Cvideo == 1) {
+    document.getElementById("nameV").innerHTML =
+      "1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart";
+    video = "video/1.1 แนะนำเว็บแอปพลิเคชัน อพม.Smart.mp4";
+  } else if (Cvideo == 2) {
+    document.getElementById("nameV").innerHTML = "2.1 การเข้าสู่ระบบ";
+    video = "video/2.1 การเข้าสู่ระบบ.mp4";
+  } else if (Cvideo == 3) {
+    document.getElementById("nameV").innerHTML =
+      "3.1 การยื่นคำร้องและการกดรับพิกัด GPS";
+    video = "video/3.1 การยื่นคำร้องและการกดรับพิกัด GPS.mp4";
+  } else if (Cvideo == 4) {
+    document.getElementById("nameV").innerHTML =
+      "3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม";
+    video = "video/3.2 การกรอกประวัติผู้ประสบปัญหาทางสังคม.mp4";
+  } else if (Cvideo == 5) {
+    document.getElementById("nameV").innerHTML =
+      "3.3 การกรอกที่อยู่ตามทะเบียนบ้าน";
+    video = "video/3.3 การกรอกที่อยู่ตามทะเบียนบ้าน.mp4";
+  } else if (Cvideo == 6) {
+    document.getElementById("nameV").innerHTML = "3.4 การกรอกที่อยู่ปัจจุบัน";
+    video = "video/3.4 การกรอกที่อยู่ปัจจุบัน.mp4";
+  } else if (Cvideo == 7) {
+    document.getElementById("nameV").innerHTML =
+      "3.5 การเลือกประภทผู้ขอรับบริการ";
+    video = "video/3.5การเลือกประเภทผู้ขอรับบริการ.mp4";
+  } else if (Cvideo == 8) {
+    document.getElementById("nameV").innerHTML =
+      "3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ";
+    video = "video/3.6 การเลือกสภาพปัญหาความเดือดร้อนที่พบ.mp4";
+  } else if (Cvideo == 9) {
+    document.getElementById("nameV").innerHTML =
+      "3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ";
+    video = "video/3.7 การเลือกเรื่องที่ขอรับความช่วยเหลือที่ต้องการ.mp4";
+  } else if (Cvideo == 10) {
+    document.getElementById("nameV").innerHTML =
+      "3.8 สิทธิสวัสดิการที่เคยได้รับ";
+    video = "video/3.8 สิทธิสวัสดิการที่เคยได้รับ.mp4";
+  } else if (Cvideo == 11) {
+    document.getElementById("nameV").innerHTML = "3.9 การรับรองข้อมูลส่วนบุคคล";
+    video = "video/3.9 การรับรองข้อมูลส่วนบุคคล.mp4";
+  } else if (Cvideo == 12) {
+    document.getElementById("nameV").innerHTML =
+      "3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม";
+    video = "video/3.10 การเยี่ยมบ้านและการแนบเอกสารเพิ่มเติม.mp4";
+  } else if (Cvideo == 13) {
+    document.getElementById("nameV").innerHTML =
+      "3.11 การยืนยันการบันทึกข้อมูล";
+    video = "video/3.11 การยืนยันการบันทึกข้อมูล.mp4";
+  } else if (Cvideo == 14) {
+    document.getElementById("nameV").innerHTML =
+      "4.1 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล";
+    video = "video/4.1 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับตำบล.mp4";
+  } else if (Cvideo == 15) {
+    document.getElementById("nameV").innerHTML =
+      "4.2 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ";
+    video = "video/4.2 การตรวจสอบและบันทึกข้อมูลสำหรับ อพม.ระดับอำเภอ.mp4";
+  } else if (Cvideo == 16) {
+    document.getElementById("nameV").innerHTML = "5.1 ความหมายของสถานะ";
+    video = "video/5.1 ความหมายของสถานะ.mp4";
+  } else if (Cvideo == 17) {
+    document.getElementById("nameV").innerHTML =
+      "6.1 การสร้างทางลัด อพม.Smart ไว้บนหน้าจอหลัก";
+    video = "video/6.1 การสร้างทางลัด อพม.Smart ไว้บนหน้าจอหลัก.mp4";
+  }
+  player.src({ type: 'video/mp4', src: video });
+  player.play();
 }
-
 //เปอเซนต์และห้ามกรอ
-
+var player = videojs("videoP");
 video1 = false;
 player.on("timeupdate", function () {
   var percentage = (player.currentTime() / player.duration()) * 100;

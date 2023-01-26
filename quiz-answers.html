@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz Answers</title>
+</head>
+
+<body>
+    <h1>Quiz Results</h1>
+    <p id="results"></p>
+    <h2>Answers</h2>
+    <ul id="answers"></ul>
+    <script>
+        var score = localStorage.getItem("score");
+        document.getElementById("results").innerHTML = "You scored " + score + " out of 2";
+        var answers = ["Paris", "Rome"];
+        var list = document.getElementById("answers");
+        for (var i = 0; i < answers.length; i++) {
+            var item = document.createElement("li");
+            item.innerHTML = "Question " + (i + 1) + ": " + answers[i];
+            list.appendChild(item);
+        }
+    </script>
+
+</body>
+
+</html>
