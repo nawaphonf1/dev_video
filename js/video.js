@@ -71,7 +71,7 @@ function light(Cvideo) {
 }
 //เปอเซนต์และห้ามกรอ
 var player = videojs("videoP");
-video1 = false;
+var video1 = false;
 player.on("timeupdate", function () {
   var percentage = (player.currentTime() / player.duration()) * 100;
   document.getElementById("percentage").innerHTML =
@@ -79,7 +79,24 @@ player.on("timeupdate", function () {
   if (percentage === 100) {
     video1 = true;
     player.controlBar.progressControl.show();
+    document.getElementById("videoLink4").style.pointerEvents = "auto";
+    document.getElementById("videoLink5").style.pointerEvents = "auto";
+    document.getElementById("videoLink6").style.pointerEvents = "auto";
+    document.getElementById("videoLink7").style.pointerEvents = "auto";
+    document.getElementById("videoLink8").style.pointerEvents = "auto";
+    document.getElementById("videoLink9").style.pointerEvents = "auto";
+    document.getElementById("videoLink10").style.pointerEvents = "auto";
+    document.getElementById("videoLink11").style.pointerEvents = "auto";
   } else if (video1 === false) {
     player.controlBar.progressControl.hide();
+    document.getElementById("videoLink4").style.pointerEvents = "none";
+    document.getElementById("videoLink5").style.pointerEvents = "none";
+    document.getElementById("videoLink6").style.pointerEvents = "none";
+    document.getElementById("videoLink7").style.pointerEvents = "none";
+    document.getElementById("videoLink8").style.pointerEvents = "none";
+    document.getElementById("videoLink9").style.pointerEvents = "none";
+    document.getElementById("videoLink10").style.pointerEvents = "none";
+    document.getElementById("videoLink11").style.pointerEvents = "none";
   }
 });
+
