@@ -60,7 +60,7 @@ var questions = [
     message: "กรุณากลับไปดูวิดีโอในส่วนที่ 3",
   },
 ];
-
+//สร้างtagและรูปแบบในหน้าqize.html
 function displayQuestions() {
   for (var i = 0; i < questions.length; i++) {
     var questionDiv = document.createElement("div");
@@ -103,11 +103,11 @@ function displayQuestions() {
 }
 
 function checkAnswers() {
+  //เลื่อนไปบนสุดเมื่อเริ่มfunction
   window.scrollTo(0, 0);
-
-  
-
+  //ตัวแปรเก็บคะแนน
   var correctAnswers = 0;
+  
   for (var i = 0; i < questions.length; i++) {
     var radios = document.getElementsByName("question" + (i + 1));
     var questionCol = document.getElementsByClassName("col-12")[i];
@@ -129,9 +129,11 @@ function checkAnswers() {
       questionCol.appendChild(message);
     }
   }
+
   //แสดงคำตอบ
   document.getElementById("result").innerHTML =
     "คุณได้คะแนน " + correctAnswers + " / " + questions.length;
+  //เช็กว่าผ่านการทดสอบหรือไม่
   if(correctAnswers<6){
     document.getElementById("pass").innerHTML = "คุณยังไม่ผ่านการทดสอบกรุณาทบทวนและสอบใหม่อีกครั้ง";
     document.getElementById("pass").style.color = "red";
@@ -139,8 +141,10 @@ function checkAnswers() {
     document.getElementById("pass").innerHTML = "คุณผ่านการทดสอบแล้ว";
     document.getElementById("pass").style.color = "green";
   }
+
   //ทำให้ปุ่มsubmitหายเมื่อกดส่งคำตอบ
   document.getElementById("submitBtn").style.display = "none";
+
   //เพิ่มปุ่มกลับไปยังหนาหลัก
   var backButton = document.createElement("input");
   backButton.setAttribute("type", "button");
@@ -148,6 +152,7 @@ function checkAnswers() {
   backButton.setAttribute("class", "btn btn-primary center1");
   backButton.setAttribute("onclick", "location.href='User-page.html'");
   document.getElementById("quizForm").appendChild(backButton);
+
   //เมื่อกดส่งคำตอบจะไม่สามารถทำข้อสอบต่อได้
   var inputs = document.getElementsByClassName("form-check-input");
   for (var i = 0; i < inputs.length; i++) {
