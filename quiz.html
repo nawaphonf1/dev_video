@@ -27,15 +27,18 @@
 
 <body class="bg-success bg-opacity-25" style="font-family: 'Sarabun', sans-serif;">
 
-    <div class="container mb-5 mt-4">
-        <h1 class="text-center">แบบทดสอบหลังเรียน</h1>
-        <h4 id="result"class="center1 pb-5"></h4>
-        <form id="quizForm" class="ms-3">
+    <div class="container ">
+        <div class="mb-5 mt-4 pt-lg-3 pb-lg-5 pt-3 pb-5 bg-light shadow">
+            <h1 class="text-center">แบบทดสอบหลังเรียน</h1>
+            <h4 id="result" class="center1 pb-5"></h4>
+            <h4 id="pass" class="center1 pb-5 "></h4>
+            <form id="quizForm" class="ms-3" action="" method="post">
 
-        </form>
-        
-        <input class="btn btn-primary center1" type="button" value="Submit" onclick="checkAnswers()" id="submitBtn">
+            </form>
 
+            <input class="btn btn-primary center1" type="button" value="ส่งคำตอบ" onclick="checkAnswers()"
+                id="submitBtn">
+        </div>
     </div>
 
 </body>

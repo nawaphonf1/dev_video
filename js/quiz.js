@@ -132,6 +132,13 @@ function checkAnswers() {
   //แสดงคำตอบ
   document.getElementById("result").innerHTML =
     "คุณได้คะแนน " + correctAnswers + " / " + questions.length;
+  if(correctAnswers<6){
+    document.getElementById("pass").innerHTML = "คุณยังไม่ผ่านการทดสอบกรุณาทบทวนและสอบใหม่อีกครั้ง";
+    document.getElementById("pass").style.color = "red";
+  }else{
+    document.getElementById("pass").innerHTML = "คุณผ่านการทดสอบแล้ว";
+    document.getElementById("pass").style.color = "green";
+  }
   //ทำให้ปุ่มsubmitหายเมื่อกดส่งคำตอบ
   document.getElementById("submitBtn").style.display = "none";
   //เพิ่มปุ่มกลับไปยังหนาหลัก
